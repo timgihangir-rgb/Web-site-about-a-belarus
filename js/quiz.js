@@ -5,7 +5,9 @@ var correct = {
   q1: "mir",
   q2: "bison",
   q3: "library",
-  q4: "draniki"
+  q4: "draniki",
+  q5: "nesvizh",
+  q6: "redchurch"
 };
 
 // messages shown after checking
@@ -13,11 +15,13 @@ var names = {
   q1: "It is Mir Castle!",
   q2: "It is the European bison (zubr)!",
   q3: "It is the National Library!",
-  q4: "It is draniki!"
+  q4: "It is draniki!",
+  q5: "It is Nesvizh Castle!",
+  q6: "It is the Red Church!"
 };
 
 function checkQuiz() {
-  var ids = ["q1", "q2", "q3", "q4"];
+  var ids = ["q1", "q2", "q3", "q4", "q5", "q6"];
   var score = 0;
   var allAnswered = true;
 
@@ -58,7 +62,7 @@ function checkQuiz() {
 
   if (!allAnswered) {
     document.getElementById("score").textContent =
-      "Please answer all 4 questions first.";
+      "Please answer all " + ids.length + " questions first.";
     return;
   }
 
@@ -75,7 +79,7 @@ function getMessage(score) {
 }
 
 function resetQuiz() {
-  ["q1", "q2", "q3", "q4"].forEach(function (id) {
+  ["q1", "q2", "q3", "q4", "q5", "q6"].forEach(function (id) {
     var question = document.getElementById(id);
 
     question.querySelectorAll("input").forEach(function (input) {
