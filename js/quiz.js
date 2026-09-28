@@ -67,14 +67,14 @@ function checkQuiz() {
   }
 
   document.getElementById("score").textContent =
-    "You got " + score + " out of 4!" + getMessage(score);
+    "You got " + score + " out of " + ids.length + "!" + getMessage(score, ids.length);
 }
 
-function getMessage(score) {
-  if (score === 4) return " Perfect! You know Belarus very well!";
-  if (score === 3) return " Great job!";
-  if (score === 2) return " Not bad, but you can do better.";
-  if (score === 1) return " Read the main page again and try once more.";
+function getMessage(score, total) {
+  if (score === total) return " Perfect! You know Belarus very well!";
+  if (score >= total - 2) return " Great job!";
+  if (score >= total / 2) return " Not bad, but you can do better.";
+  if (score >= 1) return " Read the main page again and try once more.";
   return " Read the main page first, then come back!";
 }
 
