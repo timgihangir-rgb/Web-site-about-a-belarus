@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz about Belarus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- flag stripe: red and green -->
+  <div class="flag"></div>
+
+  <header class="header">
+    <div class="container">
+      <p class="logo">🇧🇾 Belarus</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#facts">Facts</a>
+        <a href="index.html#nature">Nature</a>
+        <a href="index.html#places">Places</a>
+        <a href="index.html#food">Food</a>
+        <a href="quiz.html" class="nav-quiz">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero small">
+    <div class="container">
+      <p class="kicker">Mini English quiz</p>
+      <h1>What do you know about Belarus?</h1>
+      <p class="subtitle">Look at each picture and choose the correct answer.
+        Then press <strong>Check answers</strong>.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container quiz">
+
+      <!-- Question 1 -->
+      <div class="question" id="q1">
+        <h2>1. What place is this?</h2>
+        <img src="images/mir_castle.jpg" alt="A red-brick castle">
+        <div class="options">
+          <label><input type="radio" name="q1" value="mir"> Mir Castle</label>
+          <label><input type="radio" name="q1" value="nesvizh"> Nesvizh Castle</label>
+          <label><input type="radio" name="q1" value="brest"> Brest Fortress</label>
+          <label><input type="radio" name="q1" value="library"> National Library</label>
+        </div>
+        <p class="result"></p>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question" id="q2">
+        <h2>2. What animal is in Belovezhskaya Pushcha?</h2>
+        <img src="images/bison.jpg" alt="A big bison">
+        <div class="options">
+          <label><input type="radio" name="q2" value="bison"> European bison (zubr)</label>
+          <label><input type="radio" name="q2" value="wolf"> Wolf</label>
+          <label><input type="radio" name="q2" value="moose"> Moose</label>
+          <label><input type="radio" name="q2" value="bear"> Brown bear</label>
+        </div>
+        <p class="result"></p>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question" id="q3">
+        <h2>3. What is this building in Minsk?</h2>
+        <img src="images/national_library.jpg" alt="A diamond-shaped building">
+        <div class="options">
+          <label><input type="radio" name="q3" value="library"> The National Library</label>
+          <label><input type="radio" name="q3" value="opera"> The Opera House</label>
+          <label><input type="radio" name="q3" value="circus"> The Circus</label>
+          <label><input type="radio" name="q3" value="mall"> A shopping mall</label>
+        </div>
+        <p class="result"></p>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="question" id="q4">
+        <h2>4. What dish is this?</h2>
+        <img src="images/draniki.jpg" alt="Potato pancakes">
+        <div class="options">
+          <label><input type="radio" name="q4" value="draniki"> Draniki</label>
+          <label><input type="radio" name="q4" value="babka"> Babka</label>
+          <label><input type="radio" name="q4" value="kalduny"> Kalduny</label>
+          <label><input type="radio" name="q4" value="borscht"> Borscht</label>
+        </div>
+        <p class="result"></p>
+      </div>
+
+      <div class="buttons">
+        <button class="button" onclick="checkQuiz()">Check answers</button>
+        <button class="button grey" onclick="resetQuiz()">Try again</button>
+      </div>
+
+      <p id="score"></p>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><a href="index.html">← Back to the main page</a></p>
+      <p class="made-by">Made by <a href="https://github.com/timgihangir-rgb" target="_blank" rel="noopener">TIMURKABYBLIK</a></p>
+    </div>
+  </footer>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>
